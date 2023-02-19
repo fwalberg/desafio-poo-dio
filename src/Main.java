@@ -1,10 +1,13 @@
 import br.com.dio.desafio.dominio.*;
+import br.com.dio.desafio.dominio.controle.DevControle;
 
 import java.time.LocalDate;
 import java.time.chrono.ChronoLocalDate;
 
 public class Main {
     public static void main(String[] args) {
+
+        DevControle devControle = new DevControle();
 
         Curso curso1 = new Curso();
         curso1.setTitulo("curso java");
@@ -34,27 +37,27 @@ public class Main {
 
         Dev dev1 = new Dev();
         dev1.setNome("Camila");
-        dev1.inscreverBootcamp(bootcamp);
+        devControle.inscreverBootCamp(dev1, bootcamp);
         System.out.println("Conteúdos Inscritos Camila:" + dev1.getConteudosInscritos());
-        dev1.progredir();
-        dev1.progredir();
+        devControle.progredir(dev1);
+        devControle.progredir(dev1);
         System.out.println("-");
         System.out.println("Conteúdos Inscritos Camila:" + dev1.getConteudosInscritos());
         System.out.println("Conteúdos Concluídos Camila:" + dev1.getConteudosConcluidos());
-        System.out.println("XP:" + dev1.calcularTotalXp());
+        System.out.println("XP:" + devControle.calcularTotalXp(dev1));
 
         System.out.println("-------");
 
         Dev dev2 = new Dev();
         dev2.setNome("Joao");
-        dev2.inscreverBootcamp(bootcamp);
+        devControle.inscreverBootCamp(dev2, bootcamp);
         System.out.println("Conteúdos Inscritos João:" + dev2.getConteudosInscritos());
-        dev2.progredir();
-        dev2.progredir();
-        dev2.progredir();
+        devControle.progredir(dev2);
+        devControle.progredir(dev2);
+        devControle.progredir(dev2);
         System.out.println("-");
         System.out.println("Conteúdos Inscritos João:" + dev2.getConteudosInscritos());
         System.out.println("Conteúdos Concluidos João:" + dev2.getConteudosConcluidos());
-        System.out.println("XP:" + dev2.calcularTotalXp());
+        System.out.println("XP:" + devControle.calcularTotalXp(dev2));
     }
 }
