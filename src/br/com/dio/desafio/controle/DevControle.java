@@ -1,4 +1,4 @@
-package br.com.dio.desafio.dominio.controle;
+package br.com.dio.desafio.controle;
 
 import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Conteudo;

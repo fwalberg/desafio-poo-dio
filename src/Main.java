@@ -1,8 +1,7 @@
 import br.com.dio.desafio.dominio.*;
-import br.com.dio.desafio.dominio.controle.DevControle;
+import br.com.dio.desafio.controle.DevControle;
 
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
 
 public class Main {
     public static void main(String[] args) {
